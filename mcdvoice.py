@@ -157,7 +157,6 @@ def getNuggets(val_code):
     return code
 
 
-c = getNuggets("01927-02531-11520-14382-00008-2")
 
 #some way to display code to user
 tkmb.showinfo("Verification Code", "Your code is: " + c)
