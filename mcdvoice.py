@@ -3,6 +3,7 @@ from selenium import webdriver
 from random import randrange
 import time
 import tkinter as tk
+from tkinter import simpledialog
 import tkinter.messagebox as tkmb
 
 ua = UserAgent(verify_ssl=False)
@@ -156,7 +157,11 @@ def getNuggets(val_code):
 
     return code
 
+n_obj = tk.Tk()
+n_obj.withdraw()
+user_input = simpledialog.askstring(title="Survey Code", prompt="Please enter your code (with hyphens):")
 
+c = getNuggets(user_input)
 
 #some way to display code to user
 tkmb.showinfo("Verification Code", "Your code is: " + c)
